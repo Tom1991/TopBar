@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="topBar">
+        <!--中间的标题-->
+        <attr name="CenterText" format="string"></attr>
+        <attr name="CenterTextColor" format="color"></attr>
+        <attr name="CenterTextSize" format="dimension"></attr>
+        <!--左边的Button-->
+        <attr name="LeftButtonText" format="string"></attr>
+        <attr name="LeftButtonTextColor" format="color"></attr>
+        <attr name="LeftButtonBackground" format="color|reference"></attr>
+
+        <!--右边的Button-->
+        <attr name="RightButtonText" format="string"></attr>
+        <attr name="RightButtonTextColor" format="color"></attr>
+        <attr name="RightButtonBackground" format="color|reference"></attr>
+    </declare-styleable>
+
+
+</resources>
