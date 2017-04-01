@@ -22,44 +22,15 @@
         topBar:RightButtonText="右边"
         topBar:RightButtonTextColor="#ff0000" />
 4.以上就完成了最基本的功能。
+
 5.当然点击事件也是必不可少的，这里需要自己仿照系统的来定义：
+
 6.首先定义一个接口：
-     //定义点击topBar这个整体控件的接口
-    public interface OnClickTopBarListener {
-        void leftClick();
-
-        void rightClick();
-    }
+   
 7.触发监听的方法，最好能判断下监听者是否为空，这里不再判断了：
-    leftButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //触发回调监听
-                mOnClickTopBarListener.leftClick();
-            }
-        });
-        rightButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mOnClickTopBarListener.rightClick();
-            }
-        });
+   
 8.暴露给使用者一个方法，同时需要使用者传给我一个监听者对象，以便使用这个对象去监听。
-     //暴露给使用者的方法
-    public void setOnClickTopBarListener(OnClickTopBarListener mOnClickTopBarListener) {
-        this.mOnClickTopBarListener = mOnClickTopBarListener;
-    }
+     
 9.使用点击事件，和系统的一样一样的
-     TopBar topbar = (TopBar) findViewById(R.id.topbar);
-        topbar.setOnClickTopBarListener(new TopBar.OnClickTopBarListener() {
-            @Override
-            public void leftClick() {
-                Toast.makeText(MainActivity.this, "点击了左边按钮", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void rightClick() {
-                Toast.makeText(MainActivity.this, "点击了右边按钮", Toast.LENGTH_SHORT).show();
-            }
-        });
+     
 10.当然还可以添加一些隐藏按钮的方法，以便在不需要的时候隐藏掉，这里不再赘述，只是起一个抛砖引玉的作用。
