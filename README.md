@@ -4,23 +4,8 @@
  
 2.然后创建一个TopBar类集成系统的View/ViewGroup，这里当然选择继承RelativeLayout了，在这里面的构造方法中完成对声明的属性的获取与使用。
   
-3.然后就可以在布局中使用它了，当然了不能忘记这句命名空间代码了（xmlns:topBar="http://schemas.android.com/apk/res-auto"）：
-         <topbar.tomcode.com.topbar.TopBar
-          android:id="@+id/topbar"
-          android:layout_width="match_parent"
-          android:layout_height="50dp"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentStart="true"
-          android:layout_alignParentTop="true"
-          topBar:CenterText="中间标题"
-          topBar:CenterTextColor="#00ff00"
-          topBar:CenterTextSize="12dp"
-          topBar:LeftButtonBackground="#ffd300"
-          topBar:LeftButtonText="左边"
-          topBar:LeftButtonTextColor="#ff0000"
-          topBar:RightButtonBackground="#ffd300"
-          topBar:RightButtonText="右边"
-          topBar:RightButtonTextColor="#ff0000" />
+3.然后就可以在布局中使用它了。
+      
 4.以上就完成了最基本的功能。
 
 5.当然点击事件也是必不可少的，这里需要自己仿照系统的来定义：
